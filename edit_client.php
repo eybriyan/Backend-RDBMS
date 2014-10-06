@@ -1,8 +1,9 @@
 <html>
 <head>
 	<title>Edit Client Information</title>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
 </head>
-<style type="">
+<style type="text/css">
 .Header1{
 	font-size: 22px;
 	font-weight: bold;
