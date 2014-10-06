@@ -1,7 +1,8 @@
 <html>
 <head>
 	<title>Edit Supplier Information</title>
-	<style type="">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+	<style type="text/css">
 .Header1{
 	font-size: 22px;
 	font-weight: bold;
