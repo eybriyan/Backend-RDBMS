@@ -237,7 +237,7 @@ function ViewClient() {
     $viewquery = mysql_query("SELECT * from tbl_client") or die(mysql_error());
 	echo '<center><p class = "header1"> View Client</p></center>
 	<div class= "TableID">
-	<table border="0" cellpadding="10" TableID>
+	<table border="0" cellpadding="10">
 	 <tr>
 	 <th>ClientName</th>
 	 <th>Client Contact Person</th> 
