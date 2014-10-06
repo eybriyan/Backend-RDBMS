@@ -1,3 +1,4 @@
+<?php session_start(); ob_start();?>
 <html>
 <head>
 	<title>Edit Client Transaction</title>
@@ -247,7 +248,6 @@ p.prov{
 <div>
 <div>
 	<?php
-session_start();
 if(isset($_SESSION['username']))
 {
  	function renderForm($client_id, $transaction_id, $transaction_name, $transaction_date, $transaction_desc,  $error)

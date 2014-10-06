@@ -1,3 +1,4 @@
+<?php ob_start();session_start();?>
 <html>
 <head>
 	<title>Add Content to Client</title>

@@ -1,3 +1,5 @@
+<?php 
+ob_start();session_start();?> 
 <html>
 <head>
 	<title>Add Supplier Information</title>
@@ -226,7 +228,6 @@ p.prov{
 <body>
 <div>
 <?php
-session_start();
 if(isset($_SESSION['username'])){
 function addForm($supplier_name, $supplier_contactperson, $supplier_address, $error)
 {

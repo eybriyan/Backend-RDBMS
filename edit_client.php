@@ -1,3 +1,4 @@
+<?php ob_start(); session_start();?>
 <html>
 <head>
 	<title>Edit Client Information</title>
@@ -247,7 +248,6 @@ p.prov{
 <div>
 <div>
 	<?php
-session_start();
 if(isset($_SESSION['username'])){
  	function renderForm($client_id, $client_name, $client_contactperson, $client_address, $error)
  	{
