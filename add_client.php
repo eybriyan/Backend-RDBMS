@@ -1,8 +1,9 @@
-<?php ob_start();session_start();?>
+
 <html>
+<?php ob_start();?>
 <head>
 	<title>Add Client Information</title>
-	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
 	<style type="text/css">
 .Header1{
 	font-size: 22px;

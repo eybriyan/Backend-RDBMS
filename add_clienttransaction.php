@@ -1,8 +1,8 @@
-<?php ob_start();session_start();?>
 <html>
+<?php ob_start(); session_start();?>
 <head>
 	<title>Add Content to Client</title>
-	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
 </head>
 <style type="text/css">
 .Header1{
@@ -273,8 +273,8 @@ function addForm($transaction_name, $year,$month, $day, $transaction_desc, $erro
  			<!--<strong>Transaction Date: *</strong><input type = "text" name = "transaction_date" value = "<?php echo $transaction_date ?>"> Format: yyyy-mm-dd <br/>-->
  			<p>Transaction Date:</p>
  			<p><input class="int2" type = "text" name = "year" value = "<?php echo $year ?>" placeholder = "Year"></p>
- 			<p><input class="int2" type = "text" name = "month" value = "<?php echo $month?> " placeholder = "Month"></p>
- 			<p><input class="int2" type= "text" name = "day" value = "<?php echo $day?>" placeholder= "Day"><br/></p>
+ 			<p><input class="int2" type = "text" name = "month" value = "<?php echo $month?>" placeholder = "Month"></p>
+ 			<p><input class="int2" type= "text" name = "day" value = "<?php echo $day?>" placeholder= "Day"></p><br/>
  			<p>Transaction Description: </p><input class="int3" type= "text" name = "transaction_desc" value = "<?php echo $transaction_desc ?>"> <br/>
  			<br> <br>
  			<input class ="mybutton1" type= "submit" name = "addtransact" value = "Add Transaction">

@@ -1,8 +1,8 @@
-<?php session_start(); ob_start();?>
 <html>
+<?php session_start(); ob_start();?>
 <head>
 	<title>Edit Supplier Transaction</title>
-	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
 </head>
 <style type="text/css">
 .Header1{

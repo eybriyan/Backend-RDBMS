@@ -1,8 +1,8 @@
-<?php session_start();?>
 <html>
+<?php session_start();?>
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
 </head>
 <style>
 .header1 {
@@ -237,7 +237,7 @@ function ViewClient() {
     $viewquery = mysql_query("SELECT * from tbl_client") or die(mysql_error());
 	echo '<center><p class = "header1"> View Client</p></center>
 	<div class= "TableID">
-	<table border="1" cellpadding="10" TableID>
+	<table border="0" cellpadding="10" TableID>
 	 <tr>
 	 <th>ClientName</th>
 	 <th>Client Contact Person</th> 
@@ -279,7 +279,7 @@ function ViewSupplier(){
 	$viewquery = mysql_query("SELECT * from tbl_supplier") or die(mysql_error());
 	echo '<center><p class = "header1"> View Supplier</p></center>
 	<div class="TableID">
-	 <table border="1" cellpadding="10">
+	 <table border="0" cellpadding="10">
 	   <tr>
 	   <th>Supplier Name</th>
 	   <th>Supplier Contact Person</th>

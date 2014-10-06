@@ -1,8 +1,8 @@
-<?php ob_start(); session_start();?>
 <html>
+<?php ob_start(); session_start();?>
 <head>
 	<title>Edit Client Information</title>
-	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
 </head>
 <style type="text/css">
 .Header1{

@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>View Transaction</title>
-	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
