@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title>Add Content to Supplier</title>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
 	<style type="text/css">
 .Header1{
 	font-size: 22px;
