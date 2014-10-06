@@ -10,9 +10,10 @@
 	font-weight: bold;
 	font: Verdana;
 }
+	<style>
 .TableID {
 	margin:0px;padding:0px;
-	width:100%;
+	width:80%;
 	border:1px solid #ffffff;
 	
 	-moz-border-radius-bottomleft:3px;
@@ -198,50 +199,25 @@
 
 }
 </style>
-<body>
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/"></a>
-        </div>
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-            </ul>
-
-          <div type="button" class="btn btn-primary navbar-btn navbar-right"> <a href="logout.php">Logout</a></div>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
-<div>
-<?php
+<center>
+	<title>Home</title>
+	<?php
 {
 	include 'home.php';
 	connect();
-	session_start();
-	if(isset($_SESSION['username'])){
 	ViewClient();
 	ViewSupplier();
-}
-	else {
-		echo file_get_contents("index.php");
-		echo "<div style = 'font-size:24'>Please Log-IN</div>";
-	}
 } 
 function ViewClient() {
     $viewquery = mysql_query("SELECT * from tbl_client") or die(mysql_error());
-	echo '<center><p class = "header1"> View Client</p></center>
-	<div class= "TableID">
+	echo '<p> View Client</p>
+	<div class = 'TableID'>
 	<table border="1" cellpadding="10" TableID>
 	 <tr>
-	 <th>ClientName</th>
-	 <th>Client Contact Person</th> 
-	 <th>Client Address</th>
+	 <td>ClientName</td>
+	 <td>Client Contact Person</td> 
+	 <td>Client Address</td>
+	 <td>Properties</td>
 	 </tr>';
 	  while($row = mysql_fetch_array( $viewquery )) {
 		echo '<tr>
@@ -251,74 +227,69 @@ function ViewClient() {
 		<td>
 		<center>
 		<form method = "post" action="edit_client.php?client_id=' . $row['client_id'] . '">
-			<input type = "submit" name= "submitfromhome" value = "Edit" class ="mybutton">
+			<input type = "submit" name= "submitfromhome" value = "Edit" class = "myButton">
 		</form>
-		</center>
-		</td>
-		<td>
-		<center>
+		
 		<form method = "post" action ="delete.php?client_id=' . $row['client_id'] . '">
-			<input type = "submit" name = "delsubmithome" value = "Delete" class="mybutton">
+			<input type = "submit" name = "delsubmithome" value = "Delete" class = "myButton">
 		</form>
 		</center>
 		</td>
 		</tr>';
 	} 
       echo '</table>
-      <br>
+      </div>
+      
       <div>
-      <center>
       <form method = "post" action ="add_client.php">
-			<input type = "submit" name = "addsubmithome" value = "Add New Record" class="mybutton1">
+			<input type = "submit" name = "addsubmithome" value = "Add New Record" class= "myButton1">
 	  </form>
-	  </center>
 	  </div>';
 
 } 	
 function ViewSupplier(){
 	$viewquery = mysql_query("SELECT * from tbl_supplier") or die(mysql_error());
-	echo '<center><p class = "header1"> View Supplier</p></center>
-	<div class="TableID">
+	echo '<p> View Supplier</p>
+	<div class = 'TableID'>
 	 <table border="1" cellpadding="10">
 	   <tr>
-	   <th>Supplier Name</th>
-	   <th>Supplier Contact Person</th>
-	   <th>Supplier Address</th>
+	   <td>Supplier Name</td>
+	   <td>Supplier Contact Person</td>
+	   <td>Supplier Address</td>
+	   <td>Properties</td>
 	   </tr>';
 	  while($row = mysql_fetch_array( $viewquery )) {
 		
 		echo '<tr>
-		<td><a href="supplier_transaction.php?supplier_id=' . $row['supplier_id']. '">' . $row['supplier_name'] . '</a></td>
+		<td><a href="view_supplier.php?supplier_id=' . $row['supplier_id']. '">' . $row['supplier_name'] . '</a></td>
 		<td>' . $row['supplier_contactperson'] . '</td>
 		<td>' . $row['supplier_address'] . '</td>
 		<td>
 		<center>
 		<form method = "post" action="edit_supplier.php?supplier_id=' . $row['supplier_id'] . '">
-			<input type = "submit" name= "submitfromhome" value = "Edit" class="mybutton">
+			<input type = "submit" name= "submitfromhome" value = "Edit" class = "myButton">
 		</form>
-		</center>
-		</td>
-		<td>
-		<center>
+		
 		<form method = "post" action ="delete.php?supplier_id=' . $row['supplier_id'] . '">
-			<input type = "submit" name = "delsubmithome" value = "Delete" class="mybutton">
+			<input type = "submit" name = "delsubmithome" value = "Delete"  class = "myButton">
 		</form>
 		</center>
 		</td>
 		</tr>';
 	} 
       echo '</table>
-      <br>
+      </div>
+      
       <div>
-      <center>
       <form method = "post" action ="add_supplier.php">
-			<input type = "submit" name = "addsubmithome" value = "Add New Record" class="mybutton1">
+			<input type = "submit" name = "addsubmithome" value = "Add New Record" class= "myButton1">
 	  </form>
-	  </center>
 	  </div>';
+</center>
 }
 ?>
-</div>
+</head>
+<body>
 </body>
 </html>
 
