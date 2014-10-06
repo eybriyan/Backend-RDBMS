@@ -1,9 +1,10 @@
+<?php session_start();?>
 <html>
 <head>
 	<title>Home</title>
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
 </head>
-<style type="text/css">
+<style>
 .header1 {
 
 	font-size: 25px;
@@ -223,7 +224,6 @@
 {
 	include 'home.php';
 	connect();
-	session_start();
 	if(isset($_SESSION['username'])){
 	ViewClient();
 	ViewSupplier();

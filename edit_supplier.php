@@ -1,3 +1,4 @@
+<?php session_start(); ob_start();?>
 <html>
 <head>
 	<title>Edit Supplier Information</title>
@@ -247,7 +248,6 @@ p.prov{
 <div>
 <div>
 	<?php
-session_start();
 if(isset($_SESSION['username'])){
  	function renderForm($supplier_id, $supplier_name, $supplier_contactperson, $supplier_address, $error)
  	{
