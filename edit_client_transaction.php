@@ -245,7 +245,7 @@ p.prov{
         </div><!--/.nav-collapse -->
       </div>
     </div>
-<div>
+    <br><br>
 <div>
 	<?php
 if(isset($_SESSION['username']))
@@ -269,7 +269,7 @@ if(isset($_SESSION['username']))
 	 					<!--<p><strong>Client ID:</strong> <?php echo $client_id; ?></p>	-->
  							<p>Transaction Name:</p> <input class="int1" type="text" name="transaction_name" value="<?php echo $transaction_name; ?>"/><br/>
  							<p>Transaction Date:</p> <input class="int2" type="text" name="transaction_date" value="<?php echo $transaction_date; ?>"/><br/>
- 							<p>Transaction Description:</p> <input class="int3" type="text" name="transaction_desc" value="<?php echo $transaction_desc; ?>"/><br/>
+ 							<p>Transaction Description:</p> <input class="int3" type="text" name="transaction_desc" value="<?php echo $transaction_desc; ?>"/>
  							<br/><br/>
  							<input class= "mybutton1" type="submit" name="submit_client" value="Save">
  							<input class= "mybutton1" type= "submit" name = "canceleditclient" value = "Cancel">
@@ -350,5 +350,8 @@ if(isset($_SESSION['username']))
 	}
 ?>
 </div>
+	<script src="./js/vendors/jquery.js"></script>
+    <script src="./js/vendors/bootstrap.min.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>

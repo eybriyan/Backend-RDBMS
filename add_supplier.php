@@ -225,22 +225,6 @@ p.prov{
 	</style>
 </head>
 <body>
-<div>
-<?php
-if(isset($_SESSION['username'])){
-function addForm($supplier_name, $supplier_contactperson, $supplier_address, $error)
-{
-?>
-<?php 
- if ($error != '')
- {
- echo '<div style="padding:4px; border:1px solid red; color:red;">'.$error.'</div>';
- }
-
- ?>
- <form action = "" method = "post">
- 	<center>
- 	<div class="tab1">
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -260,8 +244,28 @@ function addForm($supplier_name, $supplier_contactperson, $supplier_address, $er
           <div type="button" class="btn btn-primary navbar-btn navbar-right"> <a href="logout.php">Logout</a></div>
         </div><!--/.nav-collapse -->
       </div>
-    </div>
+ </div>
+<br><br>
+
 <div>
+<?php
+if(isset($_SESSION['username'])){
+function addForm($supplier_name, $supplier_contactperson, $supplier_address, $error)
+{
+?>
+<?php 
+ if ($error != '')
+ {
+ echo '<div style="padding:4px; border:1px solid red; color:red;">'.$error.'</div>';
+ }
+
+ ?>
+
+
+ <form action = "" method = "post">
+ 	<center>
+ 	<div class="tab1">
+
  		<table>
  		<p class="Header1">Add Supplier Information</p>
  		<hr>
@@ -318,6 +322,9 @@ else {
 		echo "<div style = 'font-size:24'>Please Log-IN</div>";
 }
 ?>
-</div>
+
+	<script src="./js/vendors/jquery.js"></script>
+    <script src="./js/vendors/bootstrap.min.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>

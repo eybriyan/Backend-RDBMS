@@ -245,7 +245,7 @@ p.prov{
         </div><!--/.nav-collapse -->
       </div>
     </div>
-<div>
+    <br><br>
 <div>
 	<?php
 if(isset($_SESSION['username'])){
@@ -350,5 +350,8 @@ if(isset($_SESSION['username'])){
 	}
 ?>
 </div>
+	<script src="./js/vendors/jquery.js"></script>
+    <script src="./js/vendors/bootstrap.min.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>

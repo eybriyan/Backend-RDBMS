@@ -96,5 +96,8 @@ else {
 }
 ?>
 </div>
+	<script src="./js/vendors/jquery.js"></script>
+    <script src="./js/vendors/bootstrap.min.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>

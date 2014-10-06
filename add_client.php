@@ -246,6 +246,7 @@ p.prov{
         </div><!--/.nav-collapse -->
       </div>
     </div>
+    <br><br>
 <div>
 <?php
 function addForm($client_name, $client_contactperson, $client_address, $error)
@@ -275,7 +276,7 @@ if ($error != '')
  		<br>
  	</div>
  	<br>
- 	<p class="prov">Please provide information about your supplier</p>
+ 	<p class="prov">Please provide information about your client</p>
  </center>
  </form>
 <?php 
@@ -313,5 +314,8 @@ else{
 
 ?>
 </div>
+	<script src="./js/vendors/jquery.js"></script>
+    <script src="./js/vendors/bootstrap.min.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>

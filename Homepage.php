@@ -219,6 +219,7 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
+    <br><br>
 <div>
 <?php
 {
@@ -236,8 +237,8 @@
 } 
 function ViewClient() {
     $viewquery = mysql_query("SELECT * from tbl_client") or die(mysql_error());
-	echo '<p> View Client</p>
-	<div class = 'TableID'>
+	echo ' <center><p class ="header1"> View Client</p></center>
+	<div class = "TableID">
 	<table border="1" cellpadding="10" TableID>
 	 <tr>
 	 <td>ClientName</td>
@@ -265,18 +266,20 @@ function ViewClient() {
 	} 
       echo '</table>
       </div>
-      
+      <br>
       <div>
+      <center>
       <form method = "post" action ="add_client.php">
 			<input type = "submit" name = "addsubmithome" value = "Add New Record" class= "myButton1">
 	  </form>
+	  </center>
 	  </div>';
 
 } 	
 function ViewSupplier(){
 	$viewquery = mysql_query("SELECT * from tbl_supplier") or die(mysql_error());
-	echo '<p> View Supplier</p>
-	<div class = 'TableID'>
+	echo '<center><p class = "header1"> View Supplier</p></center>
+	<div class = "TableID">
 	 <table border="1" cellpadding="10">
 	   <tr>
 	   <td>Supplier Name</td>
@@ -305,16 +308,19 @@ function ViewSupplier(){
 	} 
       echo '</table>
       </div>
-      
+      <br>
       <div>
+      <center>
       <form method = "post" action ="add_supplier.php">
 			<input type = "submit" name = "addsubmithome" value = "Add New Record" class= "myButton1">
 	  </form>
+	  </center>
 	  </div>';
-</center>
 }
 ?>
 </head>
-<body>
+	<script src="./js/vendors/jquery.js"></script>
+    <script src="./js/vendors/bootstrap.min.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>
