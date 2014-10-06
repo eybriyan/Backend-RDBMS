@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title>Edit Client Transaction</title>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
 </head>
 <style type="text/css">
 .Header1{
