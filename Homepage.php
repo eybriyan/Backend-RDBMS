@@ -1,8 +1,8 @@
-
 <html>
+<?php session_start();?>
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
 </head>
 <style>
 .header1 {
@@ -232,18 +232,16 @@
 		echo file_get_contents("index.php");
 		echo "<div style = 'font-size:24'>Please Log-IN</div>";
 	}
-
 } 
 function ViewClient() {
     $viewquery = mysql_query("SELECT * from tbl_client") or die(mysql_error());
-	echo '<p> View Client</p>
-	<div class = 'TableID'>
-	<table border="1" cellpadding="10" TableID>
+	echo '<center><p class = "header1"> View Client</p></center>
+	<div class= "TableID">
+	<table border="0" cellpadding="10">
 	 <tr>
-	 <td>ClientName</td>
-	 <td>Client Contact Person</td> 
-	 <td>Client Address</td>
-	 <td>Properties</td>
+	 <th>ClientName</th>
+	 <th>Client Contact Person</th> 
+	 <th>Client Address</th>
 	 </tr>';
 	  while($row = mysql_fetch_array( $viewquery )) {
 		echo '<tr>
@@ -253,68 +251,74 @@ function ViewClient() {
 		<td>
 		<center>
 		<form method = "post" action="edit_client.php?client_id=' . $row['client_id'] . '">
-			<input type = "submit" name= "submitfromhome" value = "Edit" class = "myButton">
+			<input type = "submit" name= "submitfromhome" value = "Edit" class ="mybutton">
 		</form>
-		
+		</center>
+		</td>
+		<td>
+		<center>
 		<form method = "post" action ="delete.php?client_id=' . $row['client_id'] . '">
-			<input type = "submit" name = "delsubmithome" value = "Delete" class = "myButton">
+			<input type = "submit" name = "delsubmithome" value = "Delete" class="mybutton">
 		</form>
 		</center>
 		</td>
 		</tr>';
 	} 
       echo '</table>
-      </div>
-      
+      <br>
       <div>
+      <center>
       <form method = "post" action ="add_client.php">
-			<input type = "submit" name = "addsubmithome" value = "Add New Record" class= "myButton1">
+			<input type = "submit" name = "addsubmithome" value = "Add New Record" class="mybutton1">
 	  </form>
+	  </center>
 	  </div>';
 
 } 	
 function ViewSupplier(){
 	$viewquery = mysql_query("SELECT * from tbl_supplier") or die(mysql_error());
-	echo '<p> View Supplier</p>
-	<div class = 'TableID'>
-	 <table border="1" cellpadding="10">
+	echo '<center><p class = "header1"> View Supplier</p></center>
+	<div class="TableID">
+	 <table border="0" cellpadding="10">
 	   <tr>
-	   <td>Supplier Name</td>
-	   <td>Supplier Contact Person</td>
-	   <td>Supplier Address</td>
-	   <td>Properties</td>
+	   <th>Supplier Name</th>
+	   <th>Supplier Contact Person</th>
+	   <th>Supplier Address</th>
 	   </tr>';
 	  while($row = mysql_fetch_array( $viewquery )) {
 		
 		echo '<tr>
-		<td><a href="view_supplier.php?supplier_id=' . $row['supplier_id']. '">' . $row['supplier_name'] . '</a></td>
+		<td><a href="supplier_transaction.php?supplier_id=' . $row['supplier_id']. '">' . $row['supplier_name'] . '</a></td>
 		<td>' . $row['supplier_contactperson'] . '</td>
 		<td>' . $row['supplier_address'] . '</td>
 		<td>
 		<center>
 		<form method = "post" action="edit_supplier.php?supplier_id=' . $row['supplier_id'] . '">
-			<input type = "submit" name= "submitfromhome" value = "Edit" class = "myButton">
+			<input type = "submit" name= "submitfromhome" value = "Edit" class="mybutton">
 		</form>
-		
+		</center>
+		</td>
+		<td>
+		<center>
 		<form method = "post" action ="delete.php?supplier_id=' . $row['supplier_id'] . '">
-			<input type = "submit" name = "delsubmithome" value = "Delete"  class = "myButton">
+			<input type = "submit" name = "delsubmithome" value = "Delete" class="mybutton">
 		</form>
 		</center>
 		</td>
 		</tr>';
 	} 
       echo '</table>
-      </div>
-      
+      <br>
       <div>
+      <center>
       <form method = "post" action ="add_supplier.php">
-			<input type = "submit" name = "addsubmithome" value = "Add New Record" class= "myButton1">
+			<input type = "submit" name = "addsubmithome" value = "Add New Record" class="mybutton1">
 	  </form>
+	  </center>
 	  </div>';
-</center>
 }
 ?>
-</head>
-<body>
+</div>
 </body>
 </html>
+
